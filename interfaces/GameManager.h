@@ -34,7 +34,7 @@ private:
 
         case 0:
         {
-            gameOff = false;
+            gameOff = true;
             break;
         }
 
