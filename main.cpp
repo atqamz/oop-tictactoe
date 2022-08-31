@@ -1,12 +1,12 @@
 #include <iostream>
-#include "interfaces/Board.h"
+#include "interfaces/GameManager.h"
 
 using namespace std;
 
 int main()
 {
-    Board board;
-    board.printBoard();
+    GameManager gameManager;
+    gameManager.gameLoop();
 
     return 0;
 }

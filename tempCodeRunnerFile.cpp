@@ -1,0 +1,2 @@
+GameManager gameManager;
+    gameManager.gameLoop();

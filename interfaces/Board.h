@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class Board
 {
-public:
+private:
     string board[3][3];
 
     bool checkHorizontal()
@@ -43,13 +44,33 @@ public:
         return false;
     }
 
-    bool checkBoard()
+    bool isSet()
     {
-        if (checkHorizontal() || checkVertical() || checkDiagonal())
+        for (int i = 0; i < 3; i++)
         {
-            return true;
+            for (int j = 0; j < 3; j++)
+            {
+                if (board[i][j] != "X" || board[i][j] != "O")
+                {
+                    return false;
+                }
+            }
         }
-        return false;
+        return true;
+    }
+
+public:
+    void init()
+    {
+        int index = 1;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                board[i][j] = to_string(index);
+                index++;
+            }
+        }
     }
 
     void printBoard()
@@ -57,26 +78,48 @@ public:
 
         for (int i = 0; i < 3; i++)
         {
+            cout << "\t ";
             for (int j = 0; j < 3; j++)
             {
-                cout << board[i][j] << " | ";
+                if (j != 2)
+                    cout << board[i][j] << " | ";
+                else
+                    cout << board[i][j];
             }
+            cout << " ";
 
             if (i != 2)
                 cout << endl
-                     << "- - - - -"
+                     << "\t---|---|---"
                      << endl;
+        }
+        cout << endl;
+    }
+
+    bool setBoard(int index, string value)
+    {
+        index = index - 1;
+        int row = index / 3;
+        int col = index % 3;
+
+        if (board[row][col] == "X" || board[row][col] == "O")
+        {
+            cout << "This field is already set" << endl;
+            return false;
+        }
+        else
+        {
+            board[row][col] = value;
+            return true;
         }
     }
 
-    void setBoard()
+    bool checkWin()
     {
-        for (int i = 0; i < 3; i++)
+        if (checkHorizontal() || checkVertical() || checkDiagonal())
         {
-            for (int j = 0; j < 3; j++)
-            {
-                board[i][j] = " ";
-            }
+            return true;
         }
+        return false;
     }
 };
