@@ -5,8 +5,6 @@ using namespace std;
 class Board
 {
 private:
-    string board[3][3];
-
     bool checkHorizontal()
     {
         for (int i = 0; i < 3; i++)
@@ -44,22 +42,9 @@ private:
         return false;
     }
 
-    bool isSet()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                if (board[i][j] != "X" || board[i][j] != "O")
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
 public:
+    string board[3][3];
+
     void init()
     {
         int index = 1;
