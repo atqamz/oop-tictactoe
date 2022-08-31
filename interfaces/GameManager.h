@@ -122,6 +122,18 @@ private:
                 break;
             }
 
+            if (TicTacToe.checkFull())
+            {
+                isOver = true;
+
+                cout << "Draw!" << endl;
+
+                TicTacToe.printBoard();
+                playAgain();
+
+                break;
+            }
+
             if (player1.isTurn)
                 cout << player1.username << "'s turn" << endl;
             else
@@ -183,7 +195,18 @@ private:
                 }
 
                 TicTacToe.printBoard();
+                playAgain();
 
+                break;
+            }
+
+            if (TicTacToe.checkFull())
+            {
+                isOver = true;
+
+                cout << "Draw!" << endl;
+
+                TicTacToe.printBoard();
                 playAgain();
 
                 break;
