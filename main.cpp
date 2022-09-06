@@ -1,7 +1,4 @@
-#include <iostream>
 #include "interfaces/GameManager.h"
-
-using namespace std;
 
 int main()
 {
