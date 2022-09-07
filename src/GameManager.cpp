@@ -41,8 +41,6 @@ void GameManager::announceWin()
 {
     isOver = true;
 
-    cout << "TicTacToe!!" << endl;
-
     if (!players[0].isTurn)
     {
         cout << "Player 1 wins!" << endl;
