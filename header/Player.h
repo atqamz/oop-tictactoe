@@ -9,20 +9,11 @@ class Player
 public:
     string username;
     bool isTurn;
+    bool isBot;
 
-    Player(string _username);
-
+    Player(string _username, bool _isBot);
     void setPlayerTurn();
-
     void unsetPlayerTurn();
-
     int playTurn();
-};
-
-class Bot : public Player
-{
-public:
-    Bot(string _username);
-
     int playBotTurn();
 };

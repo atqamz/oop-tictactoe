@@ -3,10 +3,12 @@
 #include <cmath>
 #include <string>
 
+using namespace std;
+
 class Board
 {
 private:
-    std::string board[3][3];
+    string board[3][3];
 
     bool checkHorizontal();
     bool checkVertical();

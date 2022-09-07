@@ -1,11 +1,11 @@
 #include "../header/Player.h"
-
 #include <iostream>
 
-Player::Player(string _username)
+Player::Player(string _username, bool _isBot)
 {
-    username = _username;
-    isTurn = false;
+    this->username = _username;
+    this->isBot = _isBot;
+    this->isTurn = false;
 }
 
 void Player::setPlayerTurn()
@@ -27,14 +27,9 @@ int Player::playTurn()
     return input;
 }
 
-Bot::Bot(string _username) : Player(_username)
+int Player::playBotTurn()
 {
-    username = _username;
-    isTurn = false;
-}
 
-int Bot::playBotTurn()
-{
     int input;
     input = rand() % 9 + 1;
 

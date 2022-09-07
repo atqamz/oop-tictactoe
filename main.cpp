@@ -1,11 +1,10 @@
-#include "header/GameManager.h"
+#include "header/Menu.h"
 #include <iostream>
 
 int main()
 {
     srand((unsigned)time(0));
-    GameManager gameManager;
-    gameManager.gameLoop();
+    Menu menu;
 
-    return 0;   
+    return 0;
 }

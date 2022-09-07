@@ -1,23 +1,23 @@
 #pragma once
 
+#include "Board.h"
+#include "Player.h"
+#include <vector>
+
 using namespace std;
 
 class GameManager
 {
 private:
-    bool gameOff;
     bool isOver;
+    vector<Player> players;
+    Board board;
 
-    void menu();
-    void menuInput();
-    void playMode();
-    void playModeInput();
-    void singleplayer();
-    void multiplayer();
-    void playAgain();
-    void playAgainInput();
+    void gameTurn();
+    void announceWin();
+    void announceDraw();
 
 public:
-    GameManager();
+    GameManager(vector<Player> players, Board board);
     void gameLoop();
 };
