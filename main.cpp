@@ -1,4 +1,5 @@
-#include "interfaces/GameManager.h"
+#include "header/GameManager.h"
+#include <iostream>
 
 int main()
 {
@@ -6,5 +7,5 @@ int main()
     GameManager gameManager;
     gameManager.gameLoop();
 
-    return 0;
+    return 0;   
 }
