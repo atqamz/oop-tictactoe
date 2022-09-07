@@ -1,4 +1,4 @@
-#include "../header/Player.h"
+#include "header/Player.h"
 #include <iostream>
 
 Player::Player(string _username, bool _isBot)

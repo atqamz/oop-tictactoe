@@ -1,4 +1,4 @@
-#include "../header/GameManager.h"
+#include "header/GameManager.h"
 #include <vector>
 
 using namespace std;

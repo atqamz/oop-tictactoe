@@ -1,4 +1,4 @@
-#include "../header/Board.h"
+#include "header/Board.h"
 
 using namespace std;
 
