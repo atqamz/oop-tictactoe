@@ -18,7 +18,7 @@ public:
     Board();
 
     void printBoard();
-    bool setBoard(int index, char value);
+    bool setBoard(int _index, char _value);
     bool checkWin();
     bool checkFull();
 };

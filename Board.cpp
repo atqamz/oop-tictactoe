@@ -54,7 +54,6 @@ bool Board::checkDiagonal()
 
 void Board::printBoard()
 {
-
     for (int i = 0; i < 3; i++)
     {
         cout << "\t ";
@@ -75,11 +74,11 @@ void Board::printBoard()
     cout << endl;
 }
 
-bool Board::setBoard(int index, char value)
+bool Board::setBoard(int _index, char _value)
 {
-    index = index - 1;
-    int row = index / 3;
-    int col = index % 3;
+    _index = _index - 1;
+    int row = _index / 3;
+    int col = _index % 3;
 
     if (board[row][col] == "X" || board[row][col] == "O")
     {
@@ -88,7 +87,7 @@ bool Board::setBoard(int index, char value)
     }
     else
     {
-        board[row][col] = value;
+        board[row][col] = _value;
         return true;
     }
 }

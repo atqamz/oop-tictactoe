@@ -41,7 +41,7 @@ void GameManager::announceWin()
 {
     isOver = true;
 
-    if (!players[0].isTurn)
+    if (!players[0].getIsTurn())
     {
         cout << "Player 1 wins!" << endl;
     }
@@ -55,13 +55,13 @@ void GameManager::announceWin()
 
 void GameManager::gameTurn()
 {
-    if (players[0].isTurn)
-        cout << players[0].username << "'s turn" << endl;
+    if (players[0].getIsTurn())
+        cout << players[0].getUsername() << "'s turn" << endl;
     else
-        cout << players[1].username << "'s turn" << endl;
+        cout << players[1].getUsername() << "'s turn" << endl;
 
     board.printBoard();
-    if (players[0].isTurn)
+    if (players[0].getIsTurn())
     {
         if (board.setBoard(players[0].playTurn(), 'X'))
         {
@@ -71,7 +71,7 @@ void GameManager::gameTurn()
     }
     else
     {
-        if (players[1].isBot)
+        if (players[1].getIsBot())
         {
             if (board.setBoard(players[1].playBotTurn(), 'O'))
             {

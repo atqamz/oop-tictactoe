@@ -29,9 +29,23 @@ int Player::playTurn()
 
 int Player::playBotTurn()
 {
-
     int input;
     input = rand() % 9 + 1;
 
     return input;
+}
+
+string Player::getUsername()
+{
+    return this->username;
+}
+
+bool Player::getIsTurn()
+{
+    return this->isTurn;
+}
+
+bool Player::getIsBot()
+{
+    return this->isBot;
 }

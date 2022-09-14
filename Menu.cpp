@@ -4,7 +4,7 @@ using namespace std;
 
 Menu::Menu()
 {
-    gameEngine = true;
+    setGameEngine(true);
 
     while (gameEngine)
         mainMenu();
@@ -35,7 +35,7 @@ void Menu::mainMenuInput()
 
     case 0:
     {
-        gameEngine = false;
+        setGameEngine(false);
         break;
     }
 
@@ -128,10 +128,15 @@ void Menu::playAgainInput()
     }
     case 0:
     {
-        gameEngine = false;
+        setGameEngine(false);
         break;
     }
     default:
         break;
     }
+}
+
+void Menu::setGameEngine(bool _gameEngine)
+{
+    gameEngine = _gameEngine;
 }

@@ -8,9 +8,10 @@ using namespace std;
 
 class Menu
 {
-public:
+private:
     bool gameEngine;
 
+public:
     Menu();
     void mainMenu();
     void mainMenuInput();
@@ -22,4 +23,6 @@ public:
 
     void playAgain();
     void playAgainInput();
+
+    void setGameEngine(bool _gameEngine);
 };
