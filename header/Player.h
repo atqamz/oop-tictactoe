@@ -11,7 +11,10 @@ private:
     bool isTurn;
     bool isBot;
 
+<<<<<<< Updated upstream
 public:
+=======
+>>>>>>> Stashed changes
     Player(string _username, bool _isBot);
     void setPlayerTurn();
     void unsetPlayerTurn();

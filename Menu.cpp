@@ -1,10 +1,10 @@
-#include "header/Menu.h"
+#include "../header/Menu.h"
 
 using namespace std;
 
 Menu::Menu()
 {
-    setGameEngine(true);
+    gameEngine = true;
 
     while (gameEngine)
         mainMenu();
@@ -35,7 +35,7 @@ void Menu::mainMenuInput()
 
     case 0:
     {
-        setGameEngine(false);
+        gameEngine = false;
         break;
     }
 
@@ -128,15 +128,10 @@ void Menu::playAgainInput()
     }
     case 0:
     {
-        setGameEngine(false);
+        gameEngine = false;
         break;
     }
     default:
         break;
     }
-}
-
-void Menu::setGameEngine(bool _gameEngine)
-{
-    gameEngine = _gameEngine;
 }
